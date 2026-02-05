@@ -330,7 +330,7 @@ nav .container {
     transform: translateY(-2px);
 }
 
-/* ===== PROFILE PHOTO STYLES ===== */
+/* ===== PROFILE PHOTO STYLES - UPDATED ===== */
 .profile-photo-container {
     text-align: center;
     margin-bottom: 2rem;
@@ -338,18 +338,21 @@ nav .container {
 
 .profile-photo {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     margin: 0 auto 1.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+    background-color: var(--dark-light);
 }
 
 .profile-photo img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--primary);
-    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+    object-position: center 25%; /* Adjusted: 25% from top = hair touches circle top */
     transition: all 0.4s ease;
 }
 
@@ -1304,8 +1307,8 @@ footer {
     }
     
     .profile-photo {
-        width: 150px;
-        height: 150px;
+        width: 220px;
+        height: 220px;
     }
 }
 
