@@ -16,20 +16,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
+            // Close mobile menu if open
+            if (window.innerWidth <= 768) {
+                navLinks.style.display = 'none';
+            }
         }
     });
 });
 
-// Form submission
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
-    });
+// Update copyright year
+const copyrightElement = document.querySelector('footer .footer-bottom p');
+if (copyrightElement) {
+    const currentYear = new Date().getFullYear();
+    copyrightElement.innerHTML = `&copy; ${currentYear} Workineh Abenet. All Rights Reserved.`;
 }
 
-// Update copyright year
-document.querySelector('footer .footer-bottom p').innerHTML = 
-    document.querySelector('footer .footer-bottom p').innerHTML.replace('2024', new Date().getFullYear());
+// Add current year to hero if needed
+const yearElements = document.querySelectorAll('.current-year');
+yearElements.forEach(el => {
+    el.textContent = new Date().getFullYear();
+});
+
+// Close menu when clicking outside on mobile
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.style.display = 'none';
+        }
+    }
+});
+
+// Form submission confirmation (optional - doesn't interfere with Formspree)
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    // REMOVED the event listener that was preventing Formspree submission
+    // Form will now submit directly to Formspree
+}

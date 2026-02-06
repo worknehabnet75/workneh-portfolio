@@ -827,19 +827,26 @@ nav .container {
     margin: 1rem 0;
 }
 
-.platform-icon {
+.platform-icons a {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
 }
 
-.platform-icon i {
+.platform-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.platform-icons i {
     font-size: 1.5rem;
     color: var(--primary);
 }
 
-.platform-icon span {
+.platform-icons span {
     font-size: 0.9rem;
     color: var(--gray);
 }
@@ -1158,6 +1165,7 @@ footer {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
 .social-icon {
@@ -1233,6 +1241,10 @@ footer {
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
+    
+    .social-icons {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1283,6 +1295,11 @@ footer {
         width: 100%;
         justify-content: center;
     }
+    
+    .platform-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1309,6 +1326,14 @@ footer {
     .profile-photo {
         width: 220px;
         height: 220px;
+    }
+    
+    .platform-links {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
     }
 }
 
