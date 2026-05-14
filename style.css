@@ -755,7 +755,7 @@ nav .container {
     border: 3px solid var(--primary);
     box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
     margin-bottom: 1.5rem;
-    background: var(--white);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
     position: relative;
 }
 
@@ -765,6 +765,7 @@ nav .container {
     object-fit: cover;
     object-position: center 25%;
     transition: var(--transition);
+    mix-blend-mode: lighten;
 }
 
 .about-profile .profile-photo:hover {
