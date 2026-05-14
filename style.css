@@ -1393,6 +1393,15 @@ nav .container {
     background-color: var(--light);
 }
 
+.experience-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--dark);
+    font-weight: 600;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
 .timeline {
     position: relative;
     max-width: 800px;
