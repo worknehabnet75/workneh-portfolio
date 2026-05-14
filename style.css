@@ -726,19 +726,8 @@ nav .container {
     border: 3px solid var(--primary);
     box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
+    background: var(--white);
     position: relative;
-}
-
-.about-profile .profile-photo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
-    z-index: 0;
 }
 
 .about-profile .profile-photo img {
@@ -746,8 +735,6 @@ nav .container {
     height: 100%;
     object-fit: cover;
     object-position: center 25%;
-    position: relative;
-    z-index: 1;
     transition: var(--transition);
 }
 
