@@ -173,8 +173,8 @@ nav .container {
 /* ===== HERO SECTION ===== */
 .hero {
     padding: 140px 0 100px;
-    background: linear-gradient(135deg, rgba(13, 27, 42, 0.95) 0%, rgba(27, 38, 59, 0.95) 100%),
-                url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920&q=80') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(13, 27, 42, 0.92) 0%, rgba(27, 38, 59, 0.92) 100%),
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80') center/cover no-repeat;
     color: var(--white);
     position: relative;
     overflow: hidden;
@@ -190,7 +190,7 @@ nav .container {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.2) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -201,7 +201,7 @@ nav .container {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
     pointer-events: none;
 }
 
