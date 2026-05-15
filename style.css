@@ -259,9 +259,16 @@ nav .container { display: flex; justify-content: space-between; align-items: cen
 .contact-method h4 { margin: 0 0 0.2rem; color: var(--white); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
 .contact-method span { color: var(--gray-light); font-size: 0.9rem; }
 
-.contact-form-panel { background: var(--light); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow); border: 1px solid var(--gray-light); }
-.contact-form-panel h3 { color: var(--dark); margin-bottom: 2rem; font-size: 1.4rem; display: flex; align-items: center; gap: 0.6rem; }
-.contact-form-panel h3 i { color: var(--primary); }
+.contact-form-panel { background: var(--white); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow); border: 1px solid var(--gray-light); }
+.form-panel-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--gray-light); }
+.form-panel-icon { width: 52px; height: 52px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+.form-panel-header h3 { margin: 0 0 0.2rem; color: var(--dark); font-size: 1.4rem; }
+.form-panel-sub { margin: 0; font-size: 0.88rem; color: var(--gray); }
+.form-success-msg { display: flex; align-items: flex-start; gap: 1rem; padding: 1.2rem 1.5rem; background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(16,185,129,0.15)); border: 1.5px solid var(--accent); border-radius: var(--radius-lg); margin-bottom: 1.5rem; }
+.form-success-msg i { font-size: 1.8rem; color: var(--accent); flex-shrink: 0; margin-top: 0.1rem; }
+.form-success-msg strong { display: block; color: var(--dark); font-size: 1rem; margin-bottom: 0.3rem; }
+.form-success-msg p { margin: 0; font-size: 0.9rem; color: var(--gray); }
+.form-group label i { color: var(--primary); margin-right: 0.3rem; font-size: 0.85rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-group { margin-bottom: 1.2rem; }
 .form-group label { display: block; margin-bottom: 0.4rem; font-size: 0.9rem; font-weight: 600; color: var(--dark); }
