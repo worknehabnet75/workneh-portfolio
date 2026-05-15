@@ -133,7 +133,9 @@ nav .container { display: flex; justify-content: space-between; align-items: cen
 .specialty-item strong { display: block; font-size: 1.1rem; margin-bottom: 0.3rem; color: var(--white); }
 .specialty-item span { font-size: 0.9rem; color: var(--gray-light); }
 
-.hero-links { display: flex; justify-content: center; gap: 1rem; }
+.hero-links { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.btn-cv { background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: var(--white); padding: 0.7rem 1.8rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: var(--transition); font-size: 0.95rem; }
+.btn-cv:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(16,185,129,0.35); }
 .social-link { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; color: var(--white); font-size: 1.3rem; transition: var(--transition); }
 .social-link:hover { background: var(--primary); border-color: var(--primary); transform: translateY(-5px); }
 
