@@ -28,6 +28,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Copyright year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+// File upload label update
+const fileInput = document.getElementById('fileInput');
+if (fileInput) {
+    fileInput.addEventListener('change', () => {
+        const label = document.getElementById('fileLabel');
+        const wrapper = fileInput.nextElementSibling;
+        if (fileInput.files.length > 0) {
+            label.textContent = fileInput.files[0].name;
+            wrapper.classList.add('has-file');
+        } else {
+            label.textContent = 'Choose a file or drag & drop';
+            wrapper.classList.remove('has-file');
+        }
+    });
+}
+
 // Contact form AJAX
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {

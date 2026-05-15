@@ -379,6 +379,17 @@
                             <label>Message</label>
                             <textarea name="message" placeholder="Write your message here..." rows="6" required></textarea>
                         </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-paperclip"></i> Attach a File <span style="font-weight:400;color:var(--gray)">(optional)</span></label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" id="fileInput" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.txt">
+                                <label for="fileInput" class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span id="fileLabel">Choose a file or drag &amp; drop</span>
+                                </label>
+                            </div>
+                            <p class="file-note">Supported: PDF, DOC, DOCX, PNG, JPG, TXT</p>
+                        </div>
                         <input type="hidden" name="_replyto" value="worknehabnet75@gmail.com">
                         <input type="hidden" name="_subject" value="New Message from Portfolio - worknehabnet75">
                         <input type="text" name="_gotcha" style="display:none">
