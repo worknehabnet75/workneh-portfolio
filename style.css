@@ -273,7 +273,7 @@ nav .container { display: flex; justify-content: space-between; align-items: cen
 
 /* ===== FOOTER ===== */
 footer { background: var(--dark); color: var(--white); padding: 60px 0 20px; }
-.footer-content { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-content { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; margin-bottom: 3rem; align-items: start; }
 .footer-brand h3 { color: var(--white); margin-bottom: 0.5rem; }
 .footer-brand p { color: var(--gray-light); margin-bottom: 1rem; }
 .footer-quote { font-style: italic; color: var(--gray); font-size: 0.95rem; }
@@ -298,7 +298,7 @@ footer { background: var(--dark); color: var(--white); padding: 60px 0 20px; }
     .about-profile .profile-photo { height: 250px; }
     .contact-content { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
-    .footer-content { grid-template-columns: 1fr 1fr; }
+    .footer-content { grid-template-columns: 1fr; }
     .skills-tech-row { grid-template-columns: 1fr; }
     .soft-skills-grid { grid-template-columns: repeat(2,1fr); }
 }
