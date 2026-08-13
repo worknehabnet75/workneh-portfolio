@@ -150,21 +150,13 @@ nav .container { display: flex; justify-content: space-between; align-items: cen
 .about-grid { display: grid; grid-template-columns: 350px 1fr; gap: 3rem; }
 .about-profile { position: sticky; top: 100px; align-self: start; }
 
-.profile-photo { width: 100%; height: 350px; border-radius: var(--radius-lg); border: 3px solid var(--primary); box-shadow: 0 10px 30px rgba(37,99,235,0.3); margin-bottom: 1.5rem; background: linear-gradient(135deg, #0a192f, #112240); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-
-.coder-avatar { position: relative; width: 200px; height: 250px; }
-.avatar-head { width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary)); border-radius: 50%; position: absolute; top: 20px; left: 60px; box-shadow: 0 5px 15px rgba(37,99,235,0.4); }
-.avatar-head::before { content: ''; width: 15px; height: 15px; background: #fff; border-radius: 50%; position: absolute; top: 30px; left: 20px; box-shadow: 25px 0 0 #fff; }
-.avatar-head::after { content: ''; width: 30px; height: 3px; background: #fff; border-radius: 2px; position: absolute; bottom: 20px; left: 25px; }
-.avatar-body { width: 100px; height: 80px; background: linear-gradient(135deg, var(--accent), var(--accent-dark)); border-radius: 10px; position: absolute; top: 100px; left: 50px; }
-.avatar-laptop { width: 120px; height: 70px; background: #1e293b; border-radius: 5px; position: absolute; bottom: 20px; left: 40px; }
-.avatar-laptop::before { content: ''; width: 100px; height: 50px; background: linear-gradient(135deg, #64748b, #475569); border-radius: 3px; position: absolute; top: 5px; left: 10px; }
-.code-lines { position: absolute; bottom: 40px; left: 55px; }
-.code-lines span { display: block; height: 3px; background: var(--primary-light); margin: 5px 0; border-radius: 2px; animation: typing 2s infinite; }
-.code-lines span:nth-child(1) { width: 60px; }
-.code-lines span:nth-child(2) { width: 45px; animation-delay: 0.3s; }
-.code-lines span:nth-child(3) { width: 70px; animation-delay: 0.6s; }
-@keyframes typing { 0%,100% { opacity:0.3; } 50% { opacity:1; } }
+.profile-photo { width: 100%; height: 420px; position: relative; border-radius: var(--radius-lg); border: 3px solid var(--primary); box-shadow: 0 12px 30px rgba(37,99,235,0.28); margin: 0 0 1.5rem; background: var(--dark); overflow: hidden; }
+.profile-photo::after { content: ''; position: absolute; inset: 45% 0 0; background: linear-gradient(to top, rgba(13,27,42,0.88), transparent); pointer-events: none; }
+.profile-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transition: transform 0.5s ease; }
+.profile-photo:hover img { transform: scale(1.04); }
+.profile-photo figcaption { position: absolute; z-index: 1; right: 1rem; bottom: 1rem; left: 1rem; display: flex; align-items: center; gap: 0.65rem; color: var(--white); font-size: 0.82rem; line-height: 1.4; text-shadow: 0 1px 3px rgba(0,0,0,0.45); }
+.profile-photo figcaption i { display: grid; width: 32px; height: 32px; place-items: center; flex: 0 0 32px; border-radius: 50%; color: var(--white); background: var(--primary); }
+.profile-photo figcaption strong { display: block; font-size: 0.95rem; letter-spacing: 0.01em; }
 
 .profile-info-card { background: var(--light); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow); border: 2px solid var(--gray-light); }
 .profile-info-card h3 { color: var(--dark); margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center; }
@@ -312,7 +304,7 @@ footer { background: var(--dark); color: var(--white); padding: 60px 0 20px; }
 @media (max-width: 992px) {
     .about-grid { grid-template-columns: 1fr; }
     .about-profile { position: relative; top: 0; display: grid; grid-template-columns: 250px 1fr; gap: 1.5rem; }
-    .about-profile .profile-photo { height: 250px; }
+    .about-profile .profile-photo { height: 320px; }
     .contact-content { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .footer-content { grid-template-columns: 1fr; }
@@ -333,7 +325,7 @@ footer { background: var(--dark); color: var(--white); padding: 60px 0 20px; }
     .hero-specialties { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; }
     .about-profile { grid-template-columns: 1fr; text-align: center; }
-    .about-profile .profile-photo { height: 300px; margin: 0 auto; }
+    .about-profile .profile-photo { width: min(100%, 350px); height: 420px; margin: 0 auto 1.5rem; }
     .profile-info-card p { justify-content: center; }
     .summary-card { flex-direction: column; }
     .skills-tech-row { grid-template-columns: 1fr; }
