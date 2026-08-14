@@ -112,11 +112,52 @@ nav .container { display: flex; justify-content: space-between; align-items: cen
 @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.5; } }
 
 .hero-title { font-size: 3.5rem; margin-bottom: 1.5rem; }
-.vibrate { display: inline-block; animation: vibrate 3s ease-in-out infinite; }
-@keyframes vibrate {
-    0%,100% { transform: translate(0,0); }
-    10%,30%,50%,70%,90% { transform: translate(-2px,0); }
-    20%,40%,60%,80% { transform: translate(2px,0); }
+
+/* ── Shimmer text on hero title ── */
+.shimmer-text {
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        var(--primary-light) 0%,
+        #ffffff 30%,
+        var(--accent) 50%,
+        #ffffff 70%,
+        var(--primary-light) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer {
+    0%   { background-position: 200% center; }
+    100% { background-position: -200% center; }
+}
+
+/* ── Floating specialty cards ── */
+.specialty-item:nth-child(1) { animation: floatCard 4s ease-in-out infinite; }
+.specialty-item:nth-child(2) { animation: floatCard 4s ease-in-out infinite 0.8s; }
+.specialty-item:nth-child(3) { animation: floatCard 4s ease-in-out infinite 1.6s; }
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+}
+.specialty-item:hover { animation: none; transform: translateY(-5px); }
+
+/* ── Blinking cursor after role titles ── */
+.role-primary::after,
+.role-secondary::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 3px;
+    animation: blink 1s step-start infinite;
+    color: var(--accent);
+    font-weight: 300;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
 }
 
 .hero-roles { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
