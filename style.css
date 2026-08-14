@@ -303,6 +303,15 @@ nav .container { display: flex; justify-content: space-between; align-items: cen
 .form-success-msg i { font-size: 1.8rem; color: var(--accent); flex-shrink: 0; margin-top: 0.1rem; }
 .form-success-msg strong { display: block; color: var(--dark); font-size: 1rem; margin-bottom: 0.3rem; }
 .form-success-msg p { margin: 0; font-size: 0.9rem; color: var(--gray); }
+.form-error-msg { display: flex; align-items: flex-start; gap: 1rem; padding: 1.2rem 1.5rem; background: linear-gradient(135deg, rgba(239,68,68,0.08), rgba(239,68,68,0.15)); border: 1.5px solid #ef4444; border-radius: var(--radius-lg); margin-bottom: 1.5rem; }
+.form-error-msg i { font-size: 1.8rem; color: #ef4444; flex-shrink: 0; margin-top: 0.1rem; }
+.form-error-msg strong { display: block; color: var(--dark); font-size: 1rem; margin-bottom: 0.3rem; }
+.form-error-msg p { margin: 0; font-size: 0.9rem; color: var(--gray); }
+.form-error-msg a { color: var(--primary); }
+.field-error { display: block; color: #ef4444; font-size: 0.82rem; margin-top: 0.3rem; min-height: 1rem; }
+.form-group input[aria-invalid="true"],
+.form-group select[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.1); }
 .form-group label i { color: var(--primary); margin-right: 0.3rem; font-size: 0.85rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-group { margin-bottom: 1.2rem; }
